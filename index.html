@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Sort Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Cocktail Sort Visualizer 🍹</h1>
+            <div class="status-panel">
+                <div class="stat-box">Status: <span id="status-text">Idle</span></div>
+                <div class="stat-box">Direction: <span id="direction-text">-</span></div>
+                <div class="stat-box">Comparisons: <span id="comp-count">0</span></div>
+                <div class="stat-box">Swaps: <span id="swap-count">0</span></div>
+            </div>
+        </header>
+
+        <main>
+            <div id="visualization-container" class="visualization-container">
+                </div>
+        </main>
+
+        <section class="controls">
+            <div class="control-group buttons">
+                <button id="btn-generate" class="primary">Generate New Array</button>
+                <button id="btn-start" class="success">Start Sorting</button>
+                <button id="btn-pause" class="warning" disabled>Pause</button>
+            </div>
+            
+            <div class="control-group sliders">
+                <div class="slider-container">
+                    <label for="size-slider">Array Size: <span id="size-val">40</span></label>
+                    <input type="range" id="size-slider" min="10" max="100" value="40">
+                </div>
+                <div class="slider-container">
+                    <label for="speed-slider">Speed: <span id="speed-val">Fast</span></label>
+                    <input type="range" id="speed-slider" min="10" max="200" value="50" dir="rtl">
+                </div>
+            </div>
+
+            <div class="control-group toggles">
+                <label class="toggle-label">
+                    <input type="checkbox" id="sound-toggle" checked>
+                    Sound Effects 🔊
+                </label>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
